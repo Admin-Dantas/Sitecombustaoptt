@@ -216,7 +216,7 @@
            SECÇÃO 2: SOBRE NÓS
            ═══════════════════════════════════════ */
         .alma {
-            padding: 8rem 0;
+            padding: 10rem 0;
             background: var(--branco);
         }
 
@@ -233,7 +233,7 @@
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--vermelho-combustao);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .secao-titulo {
@@ -241,7 +241,7 @@
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
             color: var(--texto-principal);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             line-height: 1.3;
         }
 
@@ -255,8 +255,8 @@
         .alma-valores {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
+            gap: 3rem;
+            margin-top: 6rem;
         }
 
         .alma-valor {
@@ -281,14 +281,14 @@
            SECÇÃO 3: AS BEBIDAS
            ═══════════════════════════════════════ */
         .bebidas {
-            padding: 8rem 0;
+            padding: 10rem 0;
             background: var(--fundo-escuro);
             color: var(--branco);
         }
 
         .bebidas-header {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 6rem;
         }
 
         .bebidas-header .secao-tag {
@@ -302,8 +302,8 @@
         .bebida-showcase {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
+            gap: 5rem;
+            margin-bottom: 5rem;
         }
 
         .bebida-card {
@@ -372,14 +372,14 @@
            SECÇÃO 4: PERFIL SENSORIAL
            ═══════════════════════════════════════ */
         .sensorial {
-            padding: 8rem 0;
+            padding: 10rem 0;
             background: var(--branco);
         }
 
         .sensorial-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
         }
 
         .sensorial-bloco {
@@ -512,13 +512,13 @@
            SECÇÃO 5: GALERIA (Foto Real no Bar)
            ═══════════════════════════════════════ */
         .galeria {
-            padding: 8rem 0;
+            padding: 10rem 0;
             background: var(--fundo-claro);
         }
 
         .galeria-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .galeria-img-container {
@@ -547,7 +547,7 @@
            SECÇÃO 6: CTA FINAL
            ═══════════════════════════════════════ */
         .cta-final {
-            padding: 8rem 0;
+            padding: 10rem 0;
             background: var(--fundo-escuro);
             color: var(--branco);
             text-align: center;
@@ -635,7 +635,116 @@
             box-shadow: 0 15px 35px rgba(0, 168, 232, 0.3);
         }
 
+        /* ═══════════════════════════════════════
+           SECÇÃO 7: LOCALIZAÇÃO
+           ═══════════════════════════════════════ */
+        .localizacao {
+            padding: 8rem 0;
+            background: var(--fundo-claro);
+        }
+
+        .localizacao-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .localizacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .localizacao-info {
+            padding: 2rem;
+        }
+
+        .localizacao-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--texto-principal);
+        }
+
+        .localizacao-info p {
+            color: var(--texto-secundario);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .localizacao-map {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+
+        .localizacao-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         /* Footer */
+        footer {
+            background: #111;
+            color: var(--branco);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        /* ═══════════════════════════════════════
+           SECÇÃO 7: LOCALIZAÇÃO
+           ═══════════════════════════════════════ */
+        .localizacao {
+            padding: 8rem 0;
+            background: var(--fundo-claro);
+        }
+
+        .localizacao-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .localizacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .localizacao-info {
+            padding: 2rem;
+        }
+
+        .localizacao-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--texto-principal);
+        }
+
+        .localizacao-info p {
+            color: var(--texto-secundario);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .localizacao-map {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+
+        .localizacao-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer
         footer {
             background: #111;
             color: var(--branco);
@@ -749,6 +858,15 @@
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
+
+            .localizacao-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .localizacao-map {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -761,7 +879,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <span class="hero-tag">Figueira da Foz, Portugal</span>
+                    <span class="hero-tag">Mocktails Premium</span>
                     <h1 class="hero-title">
                         Onde o <span class="fogo">Fogo</span> Encontra o <span class="mar">Mar</span>
                     </h1>
@@ -776,7 +894,7 @@
                 </div>
                 <div class="hero-drinks">
                     <div class="hero-drink">
-                        <img src="combustao-real.webp" alt="Combustão - Aperitivo Premium">
+                        <img src="combustao-real.png" alt="Combustão - Aperitivo Premium">
                         <div class="hero-drink-label">Aperitivo</div>
                     </div>
                     <div class="hero-drink">
@@ -795,7 +913,7 @@
         <div class="container">
             <div class="alma-content reveal">
                 <span class="secao-tag">Quem Somos</span>
-                <h2 class="secao-titulo">Mocktails com Alma, Feitos na Figueira da Foz</h2>
+                <h2 class="secao-titulo">Mocktails com Alma, Feitos com Paixão</h2>
                 <p class="alma-texto">
                     Combustão e Pitstop nasceram de uma ideia simples: criar bebidas sem álcool 
                     que não sejam apenas "a alternativa", mas sim a primeira escolha. Bebidas com 
@@ -803,9 +921,9 @@
                     desfrutar de um momento de qualidade, sem compromissos.
                 </p>
                 <p class="alma-texto">
-                    Estamos a começar na Figueira da Foz porque acreditamos que esta cidade, 
-                    com o seu ritmo descontraído e a sua cultura de esplanada, é o cenário perfeito 
-                    para bebidas que convidam a abrandar e a saborear.
+                    Cada bebida é cuidadosamente formulada para criar uma experiência completa: 
+                    Combustão abre a festa com intensidade e fogo, enquanto Pitstop encerra com 
+                    frescor e elegância. Dois momentos perfeitos, um conceito único.
                 </p>
             </div>
             <div class="alma-valores reveal">
@@ -838,7 +956,7 @@
             <div class="bebida-showcase">
                 <div class="bebida-card combustao-card reveal">
                     <div class="bebida-card-img">
-                        <img src="combustao-real.webp" alt="Combustão">
+                        <img src="combustao-real.png" alt="Combustão">
                     </div>
                     <div class="bebida-card-tipo">Aperitivo</div>
                     <h3 class="bebida-card-nome">Combustão</h3>
@@ -972,9 +1090,9 @@
                 <h2 class="secao-titulo">Combustão no Seu Elemento</h2>
             </div>
             <div class="galeria-img-container reveal">
-                <img src="combustao-real-bar.webp" alt="Combustão servida num bar da Figueira da Foz">
+                <img src="combustao-real-bar.png" alt="Combustão servida num bar">
             </div>
-            <p class="galeria-caption reveal">Combustão servida num bar da Figueira da Foz. Foto real.</p>
+            <p class="galeria-caption reveal">Combustão em ação. Foto real.</p>
         </div>
     </section>
 
@@ -987,9 +1105,8 @@
                 <span class="secao-tag" style="color: var(--rosa-degrade);">Contacto</span>
                 <h2 class="secao-titulo">Quer Servir Combustão & Pitstop?</h2>
                 <p class="cta-final-desc">
-                    Se tem um bar, hotel ou restaurante na Figueira da Foz e quer 
-                    conhecer as nossas bebidas, entre em contacto. Fazemos uma 
-                    apresentação presencial com degustação gratuita.
+                    Quer oferecer Combustão e Pitstop no seu estabelecimento? 
+                    Contacte-nos para uma apresentação presencial com degustação gratuita.
                 </p>
                 <div class="cta-final-btns">
                     <a href="demonstracao.html" class="btn-cta-vermelho">Solicitar Apresentação</a>
@@ -999,19 +1116,43 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════
+         SECÇÃO 7: LOCALIZAÇÃO
+         ═══════════════════════════════════════ -->
+    <section class="localizacao" id="localizacao">
+        <div class="container">
+            <div class="localizacao-header reveal">
+                <span class="secao-tag">Localização</span>
+                <h2 class="secao-titulo">Encontre-nos Aqui</h2>
+            </div>
+            <div class="localizacao-grid">
+                <div class="localizacao-info reveal">
+                    <h3>Onde Estamos</h3>
+                    <p>Visite-nos no nosso local de distribuição. Temos as nossas bebidas disponíveis em selecionados bares, restaurantes e espaços premium.</p>
+                    <p><strong>Disponibilidade:</strong> Segunda a domingo, 18h00 - 23h00</p>
+                    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--vermelho-combustao);">Marca a experiência. Descobre a diferença.</p>
+                </div>
+                <div class="localizacao-map reveal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.6476537950477!2d-8.860353!3d40.1409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd224b1e5c5d3e3d%3A0x123456789!2sFigueira%20da%20Foz!5e0!3m2!1spt-PT!2spt!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-brand">Combustão & Pitstop</div>
-            <p class="footer-desc">Mocktails Premium. Figueira da Foz. 0.0% ABV.</p>
+            <p class="footer-desc">Mocktails Premium. 0.0% ABV.</p>
             <div class="footer-links">
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#bebidas">Bebidas</a>
                 <a href="#sensorial">Perfil Sensorial</a>
+                <a href="#localizacao">Localização</a>
                 <a href="#contacto">Contacto</a>
             </div>
-            <p class="footer-copy">&copy; 2026 Combustão & Pitstop. Todos os direitos reservados. Figueira da Foz, Portugal.</p>
+            <p class="footer-copy">&copy; 2026 Combustão & Pitstop. Bebidas premium desenvolvidas com paixão.<br>Registado INPI - Desenho Industrial. Formulação: David Ghiraldelli.</p>
         </div>
     </footer>
 
