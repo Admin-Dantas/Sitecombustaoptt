@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Combustão & Pitstop - Mocktails Premium da Figueira da Foz. Aperitivo e Digestivo. 0.0% ABV. Sabor Intenso, Textura Viva.">
+    <title>Combustão & Pitstop - Mocktails Premium | Figueira da Foz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vermelho-combustao: #C41E3A;
+            --rosa-degrade: #F08A9B;
+            --azul-pitstop: #00A8E8;
+            --amarelo-citrico: #FFD60A;
+            --verde-menta: #2ECC71;
+            --fundo-claro: #FAFAFA;
+            --fundo-escuro: #1A1A1A;
+            --texto-principal: #2C3E50;
+            --texto-secundario: #7F8C8D;
+            --branco: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--fundo-claro);
+            color: var(--texto-principal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ═══════════════════════════════════════
+           SECÇÃO 1: HERO
+           ═══════════════════════════════════════ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--fundo-escuro);
+            overflow: hidden;
+            padding: 6rem 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(196, 30, 58, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 168, 232, 0.1) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: var(--branco);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--rosa-degrade);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.2s;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.4s;
+        }
+
+        .hero-title .fogo {
+            color: var(--vermelho-combustao);
+        }
+
+        .hero-title .mar {
+            color: var(--azul-pitstop);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.6s;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.8s;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            background: var(--vermelho-combustao);
+            color: var(--branco);
+            border: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--rosa-degrade);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(196, 30, 58, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--branco);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--azul-pitstop);
+            color: var(--azul-pitstop);
+            transform: translateY(-2px);
+        }
+
+        .hero-drinks {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 1s;
+        }
+
+        .hero-drink {
+            text-align: center;
+        }
+
+        .hero-drink img {
+            max-height: 420px;
+            width: auto;
+            filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.4));
+            transition: transform 0.4s ease;
+        }
+
+        .hero-drink:hover img {
+            transform: translateY(-10px);
+        }
+
+        .hero-drink-label {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ═══════════════════════════════════════
+           SECÇÃO 2: SOBRE NÓS
+           ═══════════════════════════════════════ */
+        .alma {
+            padding: 8rem 0;
+            background: var(--branco);
+        }
+
+        .alma-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .secao-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--vermelho-combustao);
+            margin-bottom: 1.5rem;
+        }
+
+        .secao-titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--texto-principal);
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .alma-texto {
+            font-size: 1.1rem;
+            color: var(--texto-secundario);
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+
+        .alma-valores {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .alma-valor {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .alma-valor-numero {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--vermelho-combustao);
+            margin-bottom: 0.5rem;
+        }
+
+        .alma-valor-texto {
+            font-size: 0.9rem;
+            color: var(--texto-secundario);
+        }
+
+        /* ═══════════════════════════════════════
+           SECÇÃO 3: AS BEBIDAS
+           ═══════════════════════════════════════ */
+        .bebidas {
+            padding: 8rem 0;
+            background: var(--fundo-escuro);
+            color: var(--branco);
+        }
+
+        .bebidas-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .bebidas-header .secao-tag {
+            color: var(--rosa-degrade);
+        }
+
+        .bebidas-header .secao-titulo {
+            color: var(--branco);
+        }
+
+        .bebida-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .bebida-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            padding: 3rem;
+            transition: all 0.4s ease;
+        }
+
+        .bebida-card.combustao-card {
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.15) 0%, rgba(240, 138, 155, 0.08) 100%);
+            border: 1px solid rgba(196, 30, 58, 0.2);
+        }
+
+        .bebida-card.pitstop-card {
+            background: linear-gradient(135deg, rgba(0, 168, 232, 0.15) 0%, rgba(46, 204, 113, 0.08) 100%);
+            border: 1px solid rgba(0, 168, 232, 0.2);
+        }
+
+        .bebida-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .bebida-card-img {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .bebida-card-img img {
+            max-height: 320px;
+            width: auto;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+        }
+
+        .bebida-card-tipo {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .combustao-card .bebida-card-tipo {
+            color: var(--vermelho-combustao);
+        }
+
+        .pitstop-card .bebida-card-tipo {
+            color: var(--azul-pitstop);
+        }
+
+        .bebida-card-nome {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .bebida-card-desc {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+        }
+
+        /* ═══════════════════════════════════════
+           SECÇÃO 4: PERFIL SENSORIAL
+           ═══════════════════════════════════════ */
+        .sensorial {
+            padding: 8rem 0;
+            background: var(--branco);
+        }
+
+        .sensorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .sensorial-bloco {
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+
+        .sensorial-bloco:hover {
+            border-color: transparent;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .sensorial-bloco-titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .sensorial-bloco-titulo .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-combustao { background: var(--vermelho-combustao); }
+        .dot-pitstop { background: var(--azul-pitstop); }
+
+        .sensorial-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .sensorial-item:last-child {
+            border-bottom: none;
+        }
+
+        .sensorial-item-label {
+            font-weight: 500;
+            color: var(--texto-principal);
+        }
+
+        .sensorial-item-valor {
+            font-weight: 600;
+            color: var(--texto-secundario);
+        }
+
+        .sensorial-notas {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: var(--fundo-claro);
+        }
+
+        .sensorial-notas h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--texto-secundario);
+            margin-bottom: 0.75rem;
+        }
+
+        .sensorial-notas p {
+            font-size: 0.95rem;
+            color: var(--texto-principal);
+            line-height: 1.7;
+        }
+
+        /* Info Comercial */
+        .comercial {
+            margin-top: 4rem;
+            padding: 3rem;
+            border-radius: 20px;
+            background: var(--fundo-escuro);
+            color: var(--branco);
+            text-align: center;
+        }
+
+        .comercial h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .comercial p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .comercial-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .comercial-stat {
+            text-align: center;
+        }
+
+        .comercial-stat-valor {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .comercial-stat-valor.vermelho { color: var(--vermelho-combustao); }
+        .comercial-stat-valor.azul { color: var(--azul-pitstop); }
+        .comercial-stat-valor.amarelo { color: var(--amarelo-citrico); }
+
+        .comercial-stat-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ═══════════════════════════════════════
+           SECÇÃO 5: GALERIA (Foto Real no Bar)
+           ═══════════════════════════════════════ */
+        .galeria {
+            padding: 8rem 0;
+            background: var(--fundo-claro);
+        }
+
+        .galeria-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .galeria-img-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+        }
+
+        .galeria-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .galeria-caption {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--texto-secundario);
+            font-style: italic;
+        }
+
+        /* ═══════════════════════════════════════
+           SECÇÃO 6: CTA FINAL
+           ═══════════════════════════════════════ */
+        .cta-final {
+            padding: 8rem 0;
+            background: var(--fundo-escuro);
+            color: var(--branco);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(196, 30, 58, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(0, 168, 232, 0.1) 0%, transparent 50%);
+        }
+
+        .cta-final-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-final .secao-titulo {
+            color: var(--branco);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-final-desc {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-final-btns {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-vermelho {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.2rem 3rem;
+            background: var(--vermelho-combustao);
+            color: var(--branco);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-cta-vermelho:hover {
+            background: var(--rosa-degrade);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(196, 30, 58, 0.3);
+        }
+
+        .btn-cta-azul {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.2rem 3rem;
+            background: var(--azul-pitstop);
+            color: var(--branco);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-cta-azul:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 168, 232, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: var(--branco);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--branco);
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ═══════════════════════════════════════
+           ANIMAÇÕES
+           ═══════════════════════════════════════ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVO
+           ═══════════════════════════════════════ */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-ctas {
+                justify-content: center;
+            }
+
+            .hero-drinks {
+                gap: 1rem;
+            }
+
+            .hero-drink img {
+                max-height: 280px;
+            }
+
+            .bebida-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .sensorial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .alma-valores {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .comercial-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════
+         SECÇÃO 1: HERO
+         ═══════════════════════════════════════ -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">Figueira da Foz, Portugal</span>
+                    <h1 class="hero-title">
+                        Onde o <span class="fogo">Fogo</span> Encontra o <span class="mar">Mar</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Dois mocktails premium. Zero álcool. Toda a intensidade. 
+                        Combustão abre a experiência. Pitstop fecha com frescor.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#bebidas" class="btn-primary">Descobrir as Bebidas</a>
+                        <a href="#contacto" class="btn-secondary">Sou Estabelecimento</a>
+                    </div>
+                </div>
+                <div class="hero-drinks">
+                    <div class="hero-drink">
+                        <img src="combustao-real.webp" alt="Combustão - Aperitivo Premium">
+                        <div class="hero-drink-label">Aperitivo</div>
+                    </div>
+                    <div class="hero-drink">
+                        <img src="pitstop.png" alt="Pitstop - Digestivo Premium">
+                        <div class="hero-drink-label">Digestivo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECÇÃO 2: SOBRE NÓS
+         ═══════════════════════════════════════ -->
+    <section class="alma" id="sobre">
+        <div class="container">
+            <div class="alma-content reveal">
+                <span class="secao-tag">Quem Somos</span>
+                <h2 class="secao-titulo">Mocktails com Alma, Feitos na Figueira da Foz</h2>
+                <p class="alma-texto">
+                    Combustão e Pitstop nasceram de uma ideia simples: criar bebidas sem álcool 
+                    que não sejam apenas "a alternativa", mas sim a primeira escolha. Bebidas com 
+                    sabor real, textura envolvente e personalidade própria. Feitas para quem quer 
+                    desfrutar de um momento de qualidade, sem compromissos.
+                </p>
+                <p class="alma-texto">
+                    Estamos a começar na Figueira da Foz porque acreditamos que esta cidade, 
+                    com o seu ritmo descontraído e a sua cultura de esplanada, é o cenário perfeito 
+                    para bebidas que convidam a abrandar e a saborear.
+                </p>
+            </div>
+            <div class="alma-valores reveal">
+                <div class="alma-valor">
+                    <div class="alma-valor-numero">0.0%</div>
+                    <div class="alma-valor-texto">Álcool. Toda a intensidade.</div>
+                </div>
+                <div class="alma-valor">
+                    <div class="alma-valor-numero">100%</div>
+                    <div class="alma-valor-texto">Ingredientes naturais.</div>
+                </div>
+                <div class="alma-valor">
+                    <div class="alma-valor-numero">2</div>
+                    <div class="alma-valor-texto">Momentos. Aperitivo & Digestivo.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECÇÃO 3: AS BEBIDAS
+         ═══════════════════════════════════════ -->
+    <section class="bebidas" id="bebidas">
+        <div class="container">
+            <div class="bebidas-header reveal">
+                <span class="secao-tag">As Bebidas</span>
+                <h2 class="secao-titulo">Dois Momentos. Uma Experiência Completa.</h2>
+            </div>
+
+            <div class="bebida-showcase">
+                <div class="bebida-card combustao-card reveal">
+                    <div class="bebida-card-img">
+                        <img src="combustao-real.webp" alt="Combustão">
+                    </div>
+                    <div class="bebida-card-tipo">Aperitivo</div>
+                    <h3 class="bebida-card-nome">Combustão</h3>
+                    <p class="bebida-card-desc">
+                        O arranque. Uma explosão de frutos vermelhos com notas cítricas e um 
+                        toque especiado que aquece. Doce, vibrante e com uma efervescência 
+                        que dá vida a cada gole. A cor vermelha intensa é apenas o começo.
+                    </p>
+                </div>
+
+                <div class="bebida-card pitstop-card reveal">
+                    <div class="bebida-card-img">
+                        <img src="pitstop.png" alt="Pitstop">
+                    </div>
+                    <div class="bebida-card-tipo">Digestivo</div>
+                    <h3 class="bebida-card-nome">Pitstop</h3>
+                    <p class="bebida-card-desc">
+                        A paragem. Azul elétrico como o oceano, com um frescor tropical 
+                        e herbáceo que revigora. Doce, refrescante e com folhas de menta 
+                        que encerram a experiência com elegância. A bandeira quadriculada 
+                        sinaliza: missão cumprida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECÇÃO 4: PERFIL SENSORIAL
+         ═══════════════════════════════════════ -->
+    <section class="sensorial" id="sensorial">
+        <div class="container">
+            <div class="bebidas-header reveal" style="text-align: center; margin-bottom: 4rem;">
+                <span class="secao-tag">Perfil Sensorial</span>
+                <h2 class="secao-titulo">O Que Vai Sentir</h2>
+            </div>
+
+            <div class="sensorial-grid">
+                <div class="sensorial-bloco reveal">
+                    <h3 class="sensorial-bloco-titulo">
+                        <span class="dot dot-combustao"></span>
+                        Combustão
+                    </h3>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Textura</span>
+                        <span class="sensorial-item-valor">Efervescente, aveludada</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Temperatura</span>
+                        <span class="sensorial-item-valor">Bem gelada</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Doçura</span>
+                        <span class="sensorial-item-valor">Doce e envolvente</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Acidez</span>
+                        <span class="sensorial-item-valor">Equilibrada (cítrica)</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">ABV</span>
+                        <span class="sensorial-item-valor">0.0%</span>
+                    </div>
+                    <div class="sensorial-notas">
+                        <h4>Notas de Sabor</h4>
+                        <p>Entrada doce de frutos vermelhos, seguida de um calor especiado subtil. Finaliza com frescor cítrico e efervescência viva.</p>
+                    </div>
+                </div>
+
+                <div class="sensorial-bloco reveal">
+                    <h3 class="sensorial-bloco-titulo">
+                        <span class="dot dot-pitstop"></span>
+                        Pitstop
+                    </h3>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Textura</span>
+                        <span class="sensorial-item-valor">Cristalina, refrescante</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Temperatura</span>
+                        <span class="sensorial-item-valor">Bem gelada</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Doçura</span>
+                        <span class="sensorial-item-valor">Doce e tropical</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">Frescor</span>
+                        <span class="sensorial-item-valor">Intenso (herbáceo)</span>
+                    </div>
+                    <div class="sensorial-item">
+                        <span class="sensorial-item-label">ABV</span>
+                        <span class="sensorial-item-valor">0.0%</span>
+                    </div>
+                    <div class="sensorial-notas">
+                        <h4>Notas de Sabor</h4>
+                        <p>Entrada tropical e doce, corpo herbáceo e refrescante. Finaliza limpo e revigorante, como uma brisa do Atlântico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Comercial B2B -->
+            <div class="comercial reveal">
+                <h3>Para Estabelecimentos</h3>
+                <p>Mocktails premium com margens superiores às bebidas alcoólicas tradicionais. Sem licença especial. Preparação rápida.</p>
+                <div class="comercial-stats">
+                    <div class="comercial-stat">
+                        <div class="comercial-stat-valor vermelho">0.0%</div>
+                        <div class="comercial-stat-label">Álcool. Sem licenças especiais.</div>
+                    </div>
+                    <div class="comercial-stat">
+                        <div class="comercial-stat-valor azul">2</div>
+                        <div class="comercial-stat-label">Bebidas. Aperitivo & Digestivo.</div>
+                    </div>
+                    <div class="comercial-stat">
+                        <div class="comercial-stat-valor amarelo">2min</div>
+                        <div class="comercial-stat-label">Tempo médio de preparação.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECÇÃO 5: GALERIA (Foto Real)
+         ═══════════════════════════════════════ -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <div class="galeria-header reveal">
+                <span class="secao-tag">Na Vida Real</span>
+                <h2 class="secao-titulo">Combustão no Seu Elemento</h2>
+            </div>
+            <div class="galeria-img-container reveal">
+                <img src="combustao-real-bar.webp" alt="Combustão servida num bar da Figueira da Foz">
+            </div>
+            <p class="galeria-caption reveal">Combustão servida num bar da Figueira da Foz. Foto real.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECÇÃO 6: CTA FINAL
+         ═══════════════════════════════════════ -->
+    <section class="cta-final" id="contacto">
+        <div class="container">
+            <div class="cta-final-content reveal">
+                <span class="secao-tag" style="color: var(--rosa-degrade);">Contacto</span>
+                <h2 class="secao-titulo">Quer Servir Combustão & Pitstop?</h2>
+                <p class="cta-final-desc">
+                    Se tem um bar, hotel ou restaurante na Figueira da Foz e quer 
+                    conhecer as nossas bebidas, entre em contacto. Fazemos uma 
+                    apresentação presencial com degustação gratuita.
+                </p>
+                <div class="cta-final-btns">
+                    <a href="demonstracao.html" class="btn-cta-vermelho">Solicitar Apresentação</a>
+                    <a href="#" class="btn-cta-azul">Falar no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand">Combustão & Pitstop</div>
+            <p class="footer-desc">Mocktails Premium. Figueira da Foz. 0.0% ABV.</p>
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#bebidas">Bebidas</a>
+                <a href="#sensorial">Perfil Sensorial</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Combustão & Pitstop. Todos os direitos reservados. Figueira da Foz, Portugal.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

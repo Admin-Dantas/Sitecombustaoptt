@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Formulário corporativo de demonstração Combustão. Solicite uma proposta premium de demonstração, licensing ou consultoria de menu.">
+    <title>Solicitação de Demonstração Corporativa | Combustão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #f5faff 0%, #eef5ff 38%, #ffffff 100%);
+            color: #10213d;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: #1366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 3rem 1.25rem 4rem;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .page-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            right: -4rem;
+            width: 260px;
+            height: 260px;
+            background: rgba(56, 189, 248, 0.12);
+            border-radius: 50%;
+            filter: blur(6px);
+            z-index: 0;
+        }
+
+        .page-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 4rem;
+            left: -5rem;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.16), transparent 61%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .top-link {
+            display: inline-block;
+            margin-bottom: 1.75rem;
+            color: #1366d6;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .top-link:hover {
+            color: #0b1b3b;
+        }
+
+
+
+        .form-card {
+            margin-top: 2rem;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            background: #ffffff;
+            border: 1px solid rgba(19, 102, 214, 0.16);
+            box-shadow: 0 35px 90px rgba(15, 44, 88, 0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .form-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.85rem;
+            color: #0b1b3b;
+            letter-spacing: 0.05em;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem 1rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(19, 102, 214, 0.18);
+            background: #f7fbff;
+            color: #10213d;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.25s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: 3px solid rgba(19, 102, 214, 0.75);
+            outline-offset: 4px;
+            border-color: #1366d6;
+            box-shadow: 0 0 20px rgba(19, 102, 214, 0.18);
+            background: #ffffff;
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: #777;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: linear-gradient(45deg, transparent 50%, #1366d6 50%),
+                              linear-gradient(135deg, #1366d6 50%, transparent 50%);
+            background-position: calc(100% - 1.1rem) calc(1rem + 1px), calc(100% - 0.8rem) calc(1rem + 1px);
+            background-size: 0.65rem 0.65rem, 0.65rem 0.65rem;
+            background-repeat: no-repeat;
+            padding-right: 2.5rem;
+        }
+
+        .form-textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .submit-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            width: 100%;
+            padding: 1.1rem 1.25rem;
+            background: linear-gradient(135deg, #1366d6 0%, #0f4aa0 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+            box-shadow: 0 12px 30px rgba(19, 75, 181, 0.2);
+            min-height: 56px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(19, 75, 181, 0.28);
+        }
+
+        .submit-button:focus-visible {
+            outline: 3px solid rgba(255, 123, 35, 0.85);
+            outline-offset: 4px;
+        }
+
+        .submit-button:active {
+            transform: scale(0.98);
+            opacity: 0.95;
+        }
+
+        .form-note {
+            margin-top: 1rem;
+            color: #8f8f8f;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .feedback {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.25rem 1.3rem;
+            border-radius: 1rem;
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: #0b2f5f;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback strong {
+            color: #0b2f5f;
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            text-align: center;
+            color: #40567b;
+            font-size: 0.92rem;
+        }
+
+        .footer-note a {
+            color: #ff9657;
+        }
+
+        @media (max-width: 840px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-wrapper {
+                padding: 1.25rem 1rem 3rem;
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+
+            .footer-note {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page-wrapper">
+        <a class="top-link" href="index.html">← Voltar à página principal</a>
+
+        <section class="form-card">
+            <form id="demonstracaoForm" onsubmit="handleSubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="responsavel">Nome do Responsável / Requerente</label>
+                        <input class="form-input" type="text" id="responsavel" name="responsavel" placeholder="Nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="empresa">Nome da Empresa / Estabelecimento</label>
+                        <input class="form-input" type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="nif">NIF da Entidade</label>
+                        <input class="form-input" type="number" inputmode="numeric" pattern="[0-9]*" id="nif" name="nif" placeholder="123456789" autocomplete="organization" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">E-mail Corporativo</label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="contato@suaempresa.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="telefone">Telemóvel / Contacto Direto</label>
+                        <input class="form-input" type="tel" inputmode="tel" id="telefone" name="telefone" placeholder="+55 (11) 99999-9999" autocomplete="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="morada">Morada / Rua do Estabelecimento</label>
+                        <input class="form-input" type="text" id="morada" name="morada" placeholder="Rua, número, bairro" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="assunto">Assunto do Pedido</label>
+                        <select class="form-select" id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="Demonstração Privada no Espaço">Demonstração Privada no Espaço</option>
+                            <option value="Licenciamento de Receita">Licenciamento de Receita</option>
+                            <option value="Consultoria de Menu">Consultoria de Menu</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label" for="mensagem">Mensagem / Observações</label>
+                        <textarea class="form-textarea" id="mensagem" name="mensagem" placeholder="Escreva aqui detalhes do seu pedido" required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Submeter Pedido de Demonstração</button>
+                <p class="form-note">Todos os campos são obrigatórios. Seus dados serão tratados de forma segura e usada apenas para responder ao seu pedido.</p>
+                <div class="feedback" id="feedbackMessage">
+                    <strong>Pedido enviado com sucesso!</strong>
+                    <p>Recebemos a sua solicitação e em breve um consultor entrará em contacto.</p>
+                </div>
+            </form>
+        </section>
+
+        <p class="footer-note">Se preferir, volte à <a href="index.html">página principal</a> para conhecer mais sobre o conceito Combustão.</p>
+    </main>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const feedback = document.getElementById('feedbackMessage');
+
+            feedback.classList.add('show');
+            form.reset();
+
+            setTimeout(() => {
+                feedback.classList.remove('show');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
