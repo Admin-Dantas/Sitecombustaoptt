@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Formulário corporativo de demonstração Combustão. Solicite uma proposta premium de demonstração, licensing ou consultoria de menu.">
-    <title>Solicitação de Demonstração Corporativa | Combustão</title>
+    <meta name="description" content="Formulário de Parceria B2B - Combustão & Pitstop. Solicite uma demonstração, parceria ou informação para o seu estabelecimento.">
+    <title>Parceria B2B | Combustão & Pitstop</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="cp.png">
+    <link rel="apple-touch-icon" href="cp.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Parceria B2B | Combustão & Pitstop">
+    <meta property="og:description" content="Solicite uma demonstração premium para o seu estabelecimento. Mocktails 0.0% ABV com margens superiores.">
+    <meta property="og:image" content="https://combustao-pitstop.vercel.app/cp.png">
+    <meta property="og:url" content="https://combustao-pitstop.vercel.app/demonstracao">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --vermelho-combustao: #C41E3A;
+            --rosa-degrade: #F08A9B;
+            --azul-pitstop: #00A8E8;
+            --amarelo-citrico: #FFD60A;
+            --verde-menta: #2ECC71;
+            --fundo-claro: #FAFAFA;
+            --fundo-escuro: #1A1A1A;
+            --texto-principal: #2C3E50;
+            --texto-secundario: #7F8C8D;
+            --branco: #FFFFFF;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,77 +46,182 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, #f5faff 0%, #eef5ff 38%, #ffffff 100%);
-            color: #10213d;
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background: var(--fundo-claro);
+            color: var(--texto-principal);
+            line-height: 1.7;
             overflow-x: hidden;
-        }
-
-        a {
-            color: #1366d6;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .page-wrapper {
-            width: 100%;
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 3rem 1.25rem 4rem;
+            -webkit-font-smoothing: antialiased;
             min-height: 100vh;
+        }
+
+        /* ── Hero Compacto ── */
+        .hero-mini {
+            background: var(--fundo-escuro);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
-        .page-wrapper::before {
+        .hero-mini::before {
             content: '';
             position: absolute;
-            top: 2rem;
-            right: -4rem;
-            width: 260px;
-            height: 260px;
-            background: rgba(56, 189, 248, 0.12);
-            border-radius: 50%;
-            filter: blur(6px);
-            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(196, 30, 58, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 168, 232, 0.08) 0%, transparent 50%);
+            z-index: 1;
         }
 
-        .page-wrapper::after {
-            content: '';
-            position: absolute;
-            bottom: 4rem;
-            left: -5rem;
-            width: 320px;
-            height: 320px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.16), transparent 61%);
-            border-radius: 50%;
-            z-index: 0;
+        .hero-mini-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .top-link {
+        .hero-mini-tag {
             display: inline-block;
-            margin-bottom: 1.75rem;
-            color: #1366d6;
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--rosa-degrade);
+            margin-bottom: 1rem;
         }
 
-        .top-link:hover {
-            color: #0b1b3b;
+        .hero-mini h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
         }
 
+        .hero-mini p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
 
+        .hero-mini .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .hero-mini .back-link:hover {
+            color: var(--rosa-degrade);
+        }
+
+        /* ── Contacto Direto (Topo) ── */
+        .contacto-direto {
+            padding: 2rem;
+            text-align: center;
+            background: var(--branco);
+            border-bottom: 1px solid #eee;
+        }
+
+        .contacto-direto-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--texto-secundario);
+            margin-bottom: 1rem;
+        }
+
+        .contacto-botoes {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-contacto {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebe57;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-email {
+            background: var(--fundo-escuro);
+            color: var(--branco);
+        }
+
+        .btn-email:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-contacto svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ── Formulário ── */
+        .form-section {
+            padding: 4rem 2rem 6rem;
+            max-width: 780px;
+            margin: 0 auto;
+        }
 
         .form-card {
-            margin-top: 2rem;
-            padding: 2.5rem;
-            border-radius: 2rem;
-            background: #ffffff;
-            border: 1px solid rgba(19, 102, 214, 0.16);
-            box-shadow: 0 35px 90px rgba(15, 44, 88, 0.08);
+            background: var(--branco);
+            border-radius: 24px;
+            padding: 3rem;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-header .secao-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--vermelho-combustao);
+            margin-bottom: 0.75rem;
+        }
+
+        .form-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--texto-principal);
+            line-height: 1.3;
         }
 
         .form-grid {
@@ -102,26 +233,35 @@
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 0.65rem;
+            gap: 0.5rem;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
         }
 
         .form-label {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 0.85rem;
-            color: #0b1b3b;
-            letter-spacing: 0.05em;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--texto-principal);
+        }
+
+        .form-label .required {
+            color: var(--vermelho-combustao);
         }
 
         .form-input,
         .form-select,
         .form-textarea {
             width: 100%;
-            padding: 1rem 1rem;
-            border-radius: 1rem;
-            border: 1px solid rgba(19, 102, 214, 0.18);
-            background: #f7fbff;
-            color: #10213d;
-            font-family: 'Poppins', sans-serif;
+            padding: 0.9rem 1.1rem;
+            border-radius: 12px;
+            border: 1.5px solid #e0e0e0;
+            background: var(--fundo-claro);
+            color: var(--texto-principal);
+            font-family: 'Inter', sans-serif;
             font-size: 0.95rem;
             transition: all 0.25s ease;
         }
@@ -129,87 +269,80 @@
         .form-input:focus,
         .form-select:focus,
         .form-textarea:focus {
-            outline: 3px solid rgba(19, 102, 214, 0.75);
-            outline-offset: 4px;
-            border-color: #1366d6;
-            box-shadow: 0 0 20px rgba(19, 102, 214, 0.18);
-            background: #ffffff;
+            outline: none;
+            border-color: var(--vermelho-combustao);
+            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+            background: var(--branco);
         }
 
         .form-input::placeholder,
         .form-textarea::placeholder {
-            color: #777;
+            color: #bbb;
         }
 
         .form-select {
             appearance: none;
-            background-image: linear-gradient(45deg, transparent 50%, #1366d6 50%),
-                              linear-gradient(135deg, #1366d6 50%, transparent 50%);
-            background-position: calc(100% - 1.1rem) calc(1rem + 1px), calc(100% - 0.8rem) calc(1rem + 1px);
-            background-size: 0.65rem 0.65rem, 0.65rem 0.65rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237F8C8D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
+            background-position: right 1rem center;
             padding-right: 2.5rem;
+            cursor: pointer;
         }
 
         .form-textarea {
-            min-height: 160px;
+            min-height: 140px;
             resize: vertical;
         }
 
-        .full-width {
-            grid-column: 1 / -1;
-        }
-
-        .submit-button {
+        .btn-submit {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-top: 1rem;
+            gap: 0.5rem;
             width: 100%;
-            padding: 1.1rem 1.25rem;
-            background: linear-gradient(135deg, #1366d6 0%, #0f4aa0 100%);
-            color: #ffffff;
+            padding: 1.1rem 2rem;
+            margin-top: 1.5rem;
+            background: linear-gradient(135deg, var(--vermelho-combustao) 0%, #a01830 100%);
+            color: var(--branco);
             border: none;
-            border-radius: 1rem;
-            font-family: 'Bebas Neue', sans-serif;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            letter-spacing: 0.06em;
+            font-weight: 600;
+            letter-spacing: 0.04em;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-            box-shadow: 0 12px 30px rgba(19, 75, 181, 0.2);
-            min-height: 56px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.25);
         }
 
-        .submit-button:hover {
+        .btn-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 18px 40px rgba(19, 75, 181, 0.28);
+            box-shadow: 0 15px 40px rgba(196, 30, 58, 0.35);
         }
 
-        .submit-button:focus-visible {
-            outline: 3px solid rgba(255, 123, 35, 0.85);
-            outline-offset: 4px;
-        }
-
-        .submit-button:active {
+        .btn-submit:active {
             transform: scale(0.98);
-            opacity: 0.95;
         }
 
         .form-note {
-            margin-top: 1rem;
-            color: #8f8f8f;
-            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 1.25rem;
+            font-size: 0.82rem;
+            color: var(--texto-secundario);
             line-height: 1.6;
         }
 
+        /* ── Feedback ── */
         .feedback {
             display: none;
             margin-top: 1.5rem;
-            padding: 1.25rem 1.3rem;
-            border-radius: 1rem;
-            background: rgba(56, 189, 248, 0.12);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            color: #0b2f5f;
+            padding: 1.25rem 1.5rem;
+            border-radius: 14px;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+            text-align: center;
+            animation: fadeIn 0.4s ease;
         }
 
         .feedback.show {
@@ -217,112 +350,237 @@
         }
 
         .feedback strong {
-            color: #0b2f5f;
+            display: block;
+            margin-bottom: 0.35rem;
         }
 
-        .footer-note {
-            margin-top: 2rem;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Footer ── */
+        .form-footer {
             text-align: center;
-            color: #40567b;
-            font-size: 0.92rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: var(--texto-secundario);
+            font-size: 0.9rem;
         }
 
-        .footer-note a {
-            color: #ff9657;
+        .form-footer a {
+            color: var(--vermelho-combustao);
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        @media (max-width: 840px) {
-            .form-grid {
-                grid-template-columns: 1fr;
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Responsivo ── */
+        @media (max-width: 1024px) {
+            .form-card {
+                padding: 2.5rem;
             }
         }
 
-        @media (max-width: 640px) {
-            .page-wrapper {
-                padding: 1.25rem 1rem 3rem;
+        @media (max-width: 768px) {
+            .hero-mini {
+                padding: 3rem 1.5rem 2rem;
+            }
+
+            .form-section {
+                padding: 2.5rem 1rem 4rem;
             }
 
             .form-card {
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
+                border-radius: 18px;
             }
 
-            .footer-note {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .contacto-botoes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-contacto {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-mini {
+                padding: 2.5rem 1rem 1.5rem;
+            }
+
+            .hero-mini h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-card {
+                padding: 1.5rem 1rem;
+                border-radius: 14px;
+            }
+
+            .form-input,
+            .form-select,
+            .form-textarea {
+                padding: 0.8rem 0.9rem;
                 font-size: 0.9rem;
+            }
+
+            .btn-submit {
+                padding: 1rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .contacto-direto {
+                padding: 1.5rem 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <main class="page-wrapper">
-        <a class="top-link" href="index.html">← Voltar à página principal</a>
 
-        <section class="form-card">
-            <form id="demonstracaoForm" onsubmit="handleSubmit(event)">
+    <!-- ── Hero Compacto ── -->
+    <section class="hero-mini">
+        <div class="hero-mini-content">
+            <a href="index.html" class="back-link">← Voltar ao site</a>
+            <span class="hero-mini-tag">Parceria B2B</span>
+            <h1>Leve Combustão & Pitstop ao Seu Estabelecimento</h1>
+            <p>Preencha o formulário ou contacte-nos diretamente. Respondemos em menos de 24h.</p>
+        </div>
+    </section>
+
+    <!-- ── Contacto Direto ── -->
+    <div class="contacto-direto">
+        <p class="contacto-direto-label">Prefere falar connosco já?</p>
+        <div class="contacto-botoes">
+            <a href="https://wa.me/351914934194?text=Ol%C3%A1!%20Tenho%20interesse%20em%20oferecer%20Combust%C3%A3o%20%26%20Pitstop%20no%20meu%20estabelecimento.%20Podemos%20falar%3F" class="btn-contacto btn-whatsapp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+            <a href="mailto:ghiraldelliloureiro9@gmail.com?subject=Parceria%20Combust%C3%A3o%20%26%20Pitstop&body=Ol%C3%A1!%20Tenho%20interesse%20em%20oferecer%20Combust%C3%A3o%20%26%20Pitstop%20no%20meu%20estabelecimento." class="btn-contacto btn-email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+                Email
+            </a>
+        </div>
+    </div>
+
+    <!-- ── Formulário ── -->
+    <section class="form-section">
+        <div class="form-card">
+            <div class="form-header">
+                <span class="secao-tag">Formulário de Parceria</span>
+                <h2>Solicitar Demonstração</h2>
+            </div>
+
+            <form id="parceriaForm" onsubmit="handleSubmit(event)">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label class="form-label" for="responsavel">Nome do Responsável / Requerente</label>
-                        <input class="form-input" type="text" id="responsavel" name="responsavel" placeholder="Nome completo" required>
+                        <label class="form-label" for="nome">Nome do Responsável <span class="required">*</span></label>
+                        <input class="form-input" type="text" id="nome" name="nome" placeholder="Nome completo" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="empresa">Nome da Empresa / Estabelecimento</label>
+                        <label class="form-label" for="empresa">Nome do Estabelecimento <span class="required">*</span></label>
                         <input class="form-input" type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="nif">NIF da Entidade</label>
-                        <input class="form-input" type="number" inputmode="numeric" pattern="[0-9]*" id="nif" name="nif" placeholder="123456789" autocomplete="organization" required>
+                        <label class="form-label" for="email">E-mail Corporativo <span class="required">*</span></label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="contacto@suaempresa.com" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="email">E-mail Corporativo</label>
-                        <input class="form-input" type="email" id="email" name="email" placeholder="contato@suaempresa.com" autocomplete="email" required>
+                        <label class="form-label" for="telefone">Telemóvel <span class="required">*</span></label>
+                        <input class="form-input" type="tel" id="telefone" name="telefone" placeholder="+351 9XX XXX XXX" required>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="telefone">Telemóvel / Contacto Direto</label>
-                        <input class="form-input" type="tel" inputmode="tel" id="telefone" name="telefone" placeholder="+55 (11) 99999-9999" autocomplete="tel" required>
+                    <div class="form-group full">
+                        <label class="form-label" for="morada">Morada do Estabelecimento <span class="required">*</span></label>
+                        <input class="form-input" type="text" id="morada" name="morada" placeholder="Rua, número, cidade" required>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="morada">Morada / Rua do Estabelecimento</label>
-                        <input class="form-input" type="text" id="morada" name="morada" placeholder="Rua, número, bairro" required>
-                    </div>
-                    <div class="form-group full-width">
-                        <label class="form-label" for="assunto">Assunto do Pedido</label>
+                    <div class="form-group full">
+                        <label class="form-label" for="assunto">Assunto do Pedido <span class="required">*</span></label>
                         <select class="form-select" id="assunto" name="assunto" required>
-                            <option value="">Selecione um assunto</option>
-                            <option value="Demonstração Privada no Espaço">Demonstração Privada no Espaço</option>
-                            <option value="Licenciamento de Receita">Licenciamento de Receita</option>
-                            <option value="Consultoria de Menu">Consultoria de Menu</option>
-                            <option value="Outros">Outros</option>
+                            <option value="">Selecione uma opção</option>
+                            <option value="Demonstração Presencial">Demonstração Presencial no Espaço</option>
+                            <option value="Parceria Comercial">Parceria Comercial / Distribuição</option>
+                            <option value="Informações e Preçário">Informações e Preçário</option>
+                            <option value="Evento Privado">Evento Privado</option>
+                            <option value="Outro">Outro Assunto</option>
                         </select>
                     </div>
-                    <div class="form-group full-width">
-                        <label class="form-label" for="mensagem">Mensagem / Observações</label>
-                        <textarea class="form-textarea" id="mensagem" name="mensagem" placeholder="Escreva aqui detalhes do seu pedido" required></textarea>
+                    <div class="form-group full">
+                        <label class="form-label" for="mensagem">Mensagem / Observações <span class="required">*</span></label>
+                        <textarea class="form-textarea" id="mensagem" name="mensagem" placeholder="Conte-nos sobre o seu estabelecimento e o que procura..." required></textarea>
                     </div>
                 </div>
 
-                <button type="submit" class="submit-button">Submeter Pedido de Demonstração</button>
-                <p class="form-note">Todos os campos são obrigatórios. Seus dados serão tratados de forma segura e usada apenas para responder ao seu pedido.</p>
+                <button type="submit" class="btn-submit">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    Enviar Pedido de Parceria
+                </button>
+                <p class="form-note">Todos os campos são obrigatórios. Os seus dados serão usados apenas para responder ao seu pedido.</p>
+
                 <div class="feedback" id="feedbackMessage">
-                    <strong>Pedido enviado com sucesso!</strong>
-                    <p>Recebemos a sua solicitação e em breve um consultor entrará em contacto.</p>
+                    <strong>✓ Pedido enviado com sucesso!</strong>
+                    Entraremos em contacto em menos de 24h.
                 </div>
             </form>
-        </section>
+        </div>
 
-        <p class="footer-note">Se preferir, volte à <a href="index.html">página principal</a> para conhecer mais sobre o conceito Combustão.</p>
-    </main>
+        <p class="form-footer">
+            Ou volte à <a href="index.html">página principal</a> para conhecer mais sobre as nossas bebidas.
+        </p>
+    </section>
 
     <script>
         function handleSubmit(event) {
             event.preventDefault();
             const form = event.target;
-            const feedback = document.getElementById('feedbackMessage');
+            const formData = new FormData(form);
 
+            // Build WhatsApp message
+            const nome = formData.get('nome');
+            const empresa = formData.get('empresa');
+            const email = formData.get('email');
+            const telefone = formData.get('telefone');
+            const morada = formData.get('morada');
+            const assunto = formData.get('assunto');
+            const mensagem = formData.get('mensagem');
+
+            const texto = encodeURIComponent(
+                `*Novo Pedido de Parceria - Combustão & Pitstop*\n\n` +
+                `👤 *Nome:* ${nome}\n` +
+                `🏢 *Estabelecimento:* ${empresa}\n` +
+                `📧 *Email:* ${email}\n` +
+                `📱 *Telemóvel:* ${telefone}\n` +
+                `📍 *Morada:* ${morada}\n` +
+                `📋 *Assunto:* ${assunto}\n\n` +
+                `💬 *Mensagem:* ${mensagem}`
+            );
+
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/351914934194?text=${texto}`, '_blank', 'noopener');
+
+            // Show feedback
+            const feedback = document.getElementById('feedbackMessage');
             feedback.classList.add('show');
             form.reset();
 
             setTimeout(() => {
                 feedback.classList.remove('show');
-            }, 4000);
+            }, 5000);
         }
     </script>
 </body>

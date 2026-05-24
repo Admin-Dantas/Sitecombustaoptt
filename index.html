@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Combustão & Pitstop - Mocktails Premium. Aperitivo e Digestivo. 0.0% ABV. Sabor Intenso, Textura Viva. Portugal.">
     <title>Combustão & Pitstop - Mocktails Premium | Portugal</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="cp.png">
+    <link rel="apple-touch-icon" href="cp.png">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Combustão & Pitstop - Mocktails Premium | Portugal">
+    <meta property="og:description" content="Dois mocktails premium. Zero álcool. Toda a intensidade. Combustão abre a experiência. Pitstop fecha com frescor.">
+    <meta property="og:image" content="https://combustao-pitstop.vercel.app/combustao-real.png">
+    <meta property="og:url" content="https://combustao-pitstop.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_PT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Combustão & Pitstop - Mocktails Premium">
+    <meta name="twitter:description" content="Dois mocktails premium. Zero álcool. Toda a intensidade.">
+    <meta name="twitter:image" content="https://combustao-pitstop.vercel.app/combustao-real.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -758,7 +774,41 @@
         /* ═══════════════════════════════════════
            RESPONSIVO
            ═══════════════════════════════════════ */
+
+        /* Tablet Landscape (1024px) */
+        @media (max-width: 1024px) {
+            .hero-content {
+                gap: 2.5rem;
+            }
+
+            .hero-drink img {
+                max-height: 340px;
+            }
+
+            .bebida-showcase {
+                gap: 3rem;
+            }
+
+            .sensorial-grid {
+                gap: 3rem;
+            }
+
+            .localizacao-grid {
+                gap: 2.5rem;
+            }
+        }
+
+        /* Tablet Portrait (768px) */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .hero {
+                padding: 4rem 0;
+                min-height: auto;
+            }
+
             .hero-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
@@ -779,15 +829,62 @@
             }
 
             .hero-drink img {
-                max-height: 280px;
+                max-height: 240px;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+
+            .alma {
+                padding: 6rem 0;
+            }
+
+            .bebidas {
+                padding: 6rem 0;
             }
 
             .bebida-showcase {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .bebida-card {
+                padding: 2rem;
+            }
+
+            .bebida-card-img img {
+                max-height: 240px;
+            }
+
+            .sensorial {
+                padding: 6rem 0;
             }
 
             .sensorial-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .galeria {
+                padding: 6rem 0;
+            }
+
+            .cta-final {
+                padding: 6rem 0;
+            }
+
+            .localizacao {
+                padding: 6rem 0;
+            }
+
+            .localizacao-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .localizacao-map {
+                height: 300px;
             }
 
             .alma-valores {
@@ -800,13 +897,131 @@
                 gap: 1rem;
             }
 
-            .localizacao-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .comercial {
+                padding: 2rem 1.5rem;
+            }
+
+            .secao-titulo {
+                font-size: 1.8rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+            }
+        }
+
+        /* Phone (480px) */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .hero-title {
+                font-size: 1.9rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .hero-drink img {
+                max-height: 170px;
+            }
+
+            .hero-drinks {
+                gap: 0.5rem;
+            }
+
+            .hero-drink-label {
+                font-size: 0.7rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 0.85rem 1.5rem;
+                font-size: 0.85rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .alma {
+                padding: 4rem 0;
+            }
+
+            .alma-texto {
+                font-size: 0.95rem;
+            }
+
+            .bebidas {
+                padding: 4rem 0;
+            }
+
+            .bebida-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            .bebida-card-nome {
+                font-size: 1.5rem;
+            }
+
+            .bebida-card-desc {
+                font-size: 0.85rem;
+            }
+
+            .sensorial {
+                padding: 4rem 0;
+            }
+
+            .sensorial-bloco {
+                padding: 1.5rem;
+            }
+
+            .sensorial-bloco-titulo {
+                font-size: 1.3rem;
+            }
+
+            .galeria {
+                padding: 4rem 0;
+            }
+
+            .cta-final {
+                padding: 4rem 0;
+            }
+
+            .cta-final-btns {
+                flex-direction: column;
+            }
+
+            .btn-cta-vermelho,
+            .btn-cta-azul {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .localizacao {
+                padding: 4rem 0;
             }
 
             .localizacao-map {
-                height: 300px;
+                height: 250px;
+            }
+
+            .secao-titulo {
+                font-size: 1.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.75rem;
             }
         }
     </style>
@@ -1054,7 +1269,7 @@
                 </p>
                 <div class="cta-final-btns">
                     <a href="demonstracao.html" class="btn-cta-vermelho">Solicitar Apresentação</a>
-                    <a href="#" class="btn-cta-azul">Falar no WhatsApp</a>
+                    <a href="https://wa.me/351914934194?text=Ol%C3%A1!%20Tenho%20interesse%20em%20oferecer%20Combust%C3%A3o%20%26%20Pitstop%20no%20meu%20estabelecimento." class="btn-cta-azul" target="_blank" rel="noopener">Falar no WhatsApp</a>
                 </div>
             </div>
         </div>
