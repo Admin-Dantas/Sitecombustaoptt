@@ -186,6 +186,175 @@
             flex-shrink: 0;
         }
 
+        /* ── Proposta de Valor ── */
+        .valor-section {
+            padding: 4rem 2rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .planos-section {
+            padding: 2rem 2rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .valor-container {
+            width: 100%;
+        }
+
+        .valor-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .valor-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--texto-principal);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .secao-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .beneficio-card {
+            background: var(--branco);
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .beneficio-card:hover {
+            border-color: var(--vermelho-combustao);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .beneficio-icone {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .beneficio-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--texto-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        .beneficio-card p {
+            font-size: 0.9rem;
+            color: var(--texto-secundario);
+            line-height: 1.6;
+        }
+
+        /* ── Planos / Pricing Cards ── */
+        .planos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .plano-card {
+            background: var(--branco);
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .plano-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .plano-card--destaque {
+            border-color: var(--vermelho-combustao);
+            border-width: 2px;
+            box-shadow: 0 15px 40px rgba(196, 30, 58, 0.12);
+            transform: scale(1.03);
+        }
+
+        .plano-card--destaque:hover {
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 25px 60px rgba(196, 30, 58, 0.18);
+        }
+
+        .plano-card-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--vermelho-combustao);
+            color: var(--branco);
+            padding: 0.3rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .plano-card-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--texto-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        .plano-preco {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--vermelho-combustao);
+            margin-bottom: 1.5rem;
+        }
+
+        .plano-lista {
+            list-style: none;
+            text-align: left;
+            padding: 0;
+        }
+
+        .plano-lista li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+            color: var(--texto-principal);
+            line-height: 1.5;
+        }
+
+        .plano-lista li::before {
+            content: '✓ ';
+            color: var(--verde-menta);
+            font-weight: 700;
+        }
+
+        .plano-lista li:last-child {
+            border-bottom: none;
+        }
+
         /* ── Formulário ── */
         .form-section {
             padding: 4rem 2rem 6rem;
@@ -384,11 +553,46 @@
             .form-card {
                 padding: 2.5rem;
             }
+
+            .planos-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            .plano-card {
+                padding: 1.5rem 1rem;
+            }
         }
 
         @media (max-width: 768px) {
             .hero-mini {
                 padding: 3rem 1.5rem 2rem;
+            }
+
+            .valor-section {
+                padding: 3rem 1rem 1rem;
+            }
+
+            .planos-section {
+                padding: 1rem 1rem 3rem;
+            }
+
+            .beneficios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .planos-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .plano-card--destaque {
+                transform: none;
+            }
+
+            .plano-card--destaque:hover {
+                transform: translateY(-5px);
             }
 
             .form-section {
@@ -459,8 +663,8 @@
         <div class="hero-mini-content">
             <a href="index.html" class="back-link">← Voltar ao site</a>
             <span class="hero-mini-tag">Parceria B2B</span>
-            <h1>Leve Combustão & Pitstop ao Seu Estabelecimento</h1>
-            <p>Preencha o formulário ou contacte-nos diretamente. Respondemos em menos de 24h.</p>
+            <h1>Leve a Combustão ao Seu Estabelecimento</h1>
+            <p>A nossa bebida âncora — um aperitivo com personalidade única. Preencha o formulário ou contacte-nos diretamente para uma demonstração.</p>
         </div>
     </section>
 
@@ -479,7 +683,95 @@
         </div>
     </div>
 
-    <!-- ── Formulário ── -->
+    <!-- ── Proposta de Valor ── -->
+    <section class="valor-section">
+        <div class="valor-container">
+            <div class="valor-header">
+                <span class="secao-tag" style="color: var(--vermelho-combustao);">Porquê a Combustão?</span>
+                <h2>O Que o Seu Estabelecimento Ganha</h2>
+            </div>
+
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">💰</div>
+                    <h4>Margem Superior</h4>
+                    <p>Custa menos que uma bebida alcoólica. Vende-se ao mesmo preço. 0% desperdício, 100% lucro.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">🚀</div>
+                    <h4>Sem Licença Especial</h4>
+                    <p>Mocktail 0.0% ABV. Não precisa de alvará. Pode servir amanhã.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">🎯</div>
+                    <h4>Novos Clientes</h4>
+                    <p>Casais, grávidas, desportistas, muçulmanos, turistas — um público que hoje ignora o seu bar porque não tem opção.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">📢</div>
+                    <h4>Marketing Oferecido</h4>
+                    <p>Publicamos o seu estabelecimento nas nossas redes, site e mapa de parceiros. Trazemos clientes até si.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Planos de Parceria ── -->
+    <section class="planos-section">
+        <div class="valor-container">
+            <div class="valor-header">
+                <span class="secao-tag" style="color: var(--vermelho-combustao);">Planos de Parceria</span>
+                <h2>Escolha o Seu Nível</h2>
+                <p style="color: var(--texto-secundario); max-width: 500px; margin: 0 auto;">Licença anual com receita exclusiva, formação e marketing incluído.</p>
+            </div>
+
+            <div class="planos-grid">
+                <div class="plano-card">
+                    <div class="plano-card-header">
+                        <h3>Básico</h3>
+                        <p class="plano-preco">Sob Consulta</p>
+                    </div>
+                    <ul class="plano-lista">
+                        <li>Receita exclusiva da Combustão</li>
+                        <li>Direito de uso do nome e marca</li>
+                        <li>Menção no site e mapa de parceiros</li>
+                        <li>Suporte por WhatsApp</li>
+                    </ul>
+                </div>
+
+                <div class="plano-card plano-card--destaque">
+                    <div class="plano-card-badge">Recomendado</div>
+                    <div class="plano-card-header">
+                        <h3>Premium</h3>
+                        <p class="plano-preco">Sob Consulta</p>
+                    </div>
+                    <ul class="plano-lista">
+                        <li>Tudo do plano Básico</li>
+                        <li>Formação presencial ao staff (2h)</li>
+                        <li>3 posts/stories por mês no Instagram</li>
+                        <li>Fotos profissionais no seu espaço</li>
+                        <li>Destaque prioritário no site</li>
+                    </ul>
+                </div>
+
+                <div class="plano-card">
+                    <div class="plano-card-header">
+                        <h3>Embaixador</h3>
+                        <p class="plano-preco">Sob Consulta</p>
+                    </div>
+                    <ul class="plano-lista">
+                        <li>Tudo do plano Premium</li>
+                        <li>Evento de lançamento co-organizado</li>
+                        <li>Exclusividade de zona (sem concorrência)</li>
+                        <li>Destaque no topo do site</li>
+                        <li>Conteúdo semanal dedicado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--texto-secundario);">Preencha o formulário abaixo e receba uma proposta personalizada em menos de 24h.</p>
+        </div>
+    </section>
     <section class="form-section">
         <div class="form-card">
             <div class="form-header">
@@ -513,7 +805,7 @@
                         <label class="form-label" for="assunto">Assunto do Pedido <span class="required">*</span></label>
                         <select class="form-select" id="assunto" name="assunto" required>
                             <option value="">Selecione uma opção</option>
-                            <option value="Demonstração Presencial">Demonstração Presencial no Espaço</option>
+                            <option value="Demonstração Presencial">Demonstração Presencial da Combustão</option>
                             <option value="Parceria Comercial">Parceria Comercial / Distribuição</option>
                             <option value="Informações e Preçário">Informações e Preçário</option>
                             <option value="Evento Privado">Evento Privado</option>
@@ -560,7 +852,7 @@
             const mensagem = formData.get('mensagem');
 
             const texto = encodeURIComponent(
-                `*Novo Pedido de Parceria - Combustão & Pitstop*\n\n` +
+                `*Novo Pedido de Parceria - Combustão*\n\n` +
                 `👤 *Nome:* ${nome}\n` +
                 `🏢 *Estabelecimento:* ${empresa}\n` +
                 `📧 *Email:* ${email}\n` +

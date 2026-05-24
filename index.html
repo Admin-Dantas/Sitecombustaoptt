@@ -215,8 +215,26 @@
             transition: transform 0.4s ease;
         }
 
+        .hero-drink--destaque img {
+            max-height: 480px;
+            filter: drop-shadow(0 35px 70px rgba(196, 30, 58, 0.5));
+        }
+
         .hero-drink:hover img {
             transform: translateY(-10px);
+        }
+
+        .hero-drink-badge {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.3rem 1rem;
+            background: var(--vermelho-combustao);
+            color: var(--branco);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
         }
 
         .hero-drink-label {
@@ -365,6 +383,19 @@
 
         .combustao-card .bebida-card-tipo {
             color: var(--vermelho-combustao);
+        }
+
+        .bebida-card-destaque {
+            display: inline-block;
+            padding: 0.25rem 0.9rem;
+            background: var(--vermelho-combustao);
+            color: var(--branco);
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
         }
 
         .pitstop-card .bebida-card-tipo {
@@ -832,6 +863,10 @@
                 max-height: 240px;
             }
 
+            .hero-drink--destaque img {
+                max-height: 280px;
+            }
+
             .hero-title {
                 font-size: 2.4rem;
             }
@@ -930,6 +965,10 @@
 
             .hero-drink img {
                 max-height: 170px;
+            }
+
+            .hero-drink--destaque img {
+                max-height: 200px;
             }
 
             .hero-drinks {
@@ -1049,9 +1088,10 @@
                     </div>
                 </div>
                 <div class="hero-drinks">
-                    <div class="hero-drink">
+                    <div class="hero-drink hero-drink--destaque">
                         <img src="combustao-real.png" alt="Combustão - Aperitivo Premium">
                         <div class="hero-drink-label">Aperitivo</div>
+                        <div class="hero-drink-badge">Produto Âncora</div>
                     </div>
                     <div class="hero-drink">
                         <img src="pitstop.png" alt="Pitstop - Digestivo Premium">
@@ -1114,6 +1154,7 @@
 
             <div class="bebida-showcase">
                 <div class="bebida-card combustao-card reveal">
+                    <div class="bebida-card-destaque">Produto Âncora</div>
                     <div class="bebida-card-img">
                         <img src="combustao-real.png" alt="Combustão">
                     </div>
